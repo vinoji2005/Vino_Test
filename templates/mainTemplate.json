@@ -20,7 +20,7 @@
     },
     "vnetName": {
       "type": "string",
-      "defaultValue": "vnet-fioneer-vinoth",
+      "defaultValue": "vnet",
       "metadata": {
         "description": "Name of the Virtual Network"
       }
@@ -61,7 +61,7 @@
       "properties": {},
       "tags": {
         "owner": "vinoth.subbiah",
-        "project": "fioneer-iac-poc"
+        "project": "iac-poc"
       }
     },
     {
@@ -85,8 +85,8 @@
         ]
       },
       "tags": {
-        "owner": "vinoth.subbiah",
-        "project": "fioneer-iac-poc"
+        "owner": "Tes",
+        "project": "iac-poc"
       }
     }
   ],
