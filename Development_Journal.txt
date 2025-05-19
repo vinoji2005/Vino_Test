@@ -1,0 +1,40 @@
+Date: 15-May-2025
+
+Project: Azure Infrastructure-as-Code PoC for DevOps Challenge
+
+Objective:
+Create a proof-of-concept Azure infrastructure deployment using ARM templates and PowerShell scripting, hosted on GitHub with a Deploy to Azure button.
+
+Resources & References Used:
+
+1. Azure ARM Templates Overview  
+   https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
+
+2. Deploy to Azure Button  
+   https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-to-azure-button
+
+3. Resource Group Deployment using Azure CLI  
+   https://learn.microsoft.com/en-us/cli/azure/group
+
+4. ARM Template Reference for Storage Account  
+   https://learn.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts
+
+5. ARM Template Reference for Virtual Network  
+   https://learn.microsoft.com/en-us/azure/templates/microsoft.network/virtualnetworks
+
+6. Azure CLI Deployment Documentation  
+   https://learn.microsoft.com/en-us/cli/azure/deployment/group
+
+Tools Used:
+- Azure CLI
+- PowerShell Core
+- Visual Studio Code
+
+Notes:
+- The infrastructure is built using native ARM templates.
+- Scripts support creation and cleanup of Azure resources in any supported region.
+- Templates follow best practices like parameterization, reusable patterns, and minimal hardcoding.
+
+Next Steps:
+- Repo is ready for demonstration.
+- "Deploy to Azure" button is functional and loads template directly into Azure Portal.
