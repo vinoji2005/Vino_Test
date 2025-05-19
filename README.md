@@ -8,7 +8,7 @@ This proof-of-concept  demonstrates Infrastructure as Code deployment using Azur
 
 Click below to deploy directly via Azure Portal:
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fvinoji2005%2Ffioneer-azure-iac-poc%2Fmain%2Ftemplates%2FmainTemplate.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fvinoji2005%2Vino_Test%2Fmain%2Ftemplates%2FmainTemplate.json)
 
 > ⚠️ **Note**: If this is a new subscription with no Resource Groups, please **run the PowerShell script below first** to create the required Resource Group.
 
