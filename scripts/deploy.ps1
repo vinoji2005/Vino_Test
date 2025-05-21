@@ -1,24 +1,33 @@
 param (
-    [string]$ResourceGroupName = "rg-fioneer-vinoth",
-    [string]$Location = "eastus"
+    [string]$resourceGroupName = "rg-iac-demo",
+    [string]$location = "eastus"
 )
 
-Write-Host " Logging in to Azure..."
-az login
-
-Write-Host " Checking or creating resource group..."
-$exists = az group exists --name $ResourceGroupName | ConvertFrom-Json
-if (-not $exists) {
-    az group create --name $ResourceGroupName --location $Location
-    Write-Host "✅ Resource group '$ResourceGroupName' created."
-} else {
-    Write-Host "ℹ️ Resource group '$ResourceGroupName' already exists."
+Write-Host "🔐 Logging into Azure..."
+az account show > $null 2>&1
+if ($LASTEXITCODE -ne 0) {
+    az login
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "❌ Azure login failed. Exiting."
+        exit 1
+    }
 }
 
-Write-Host "🚀 Deploying ARM template..."
-az deployment group create `
-    --resource-group $ResourceGroupName `
-    --template-file "./templates/mainTemplate.json" `
-    --parameters "./templates/parameters.json"
+$rgExists = az group exists --name $resourceGroupName --output tsv
+if ($rgExists -eq "false") {
+    Write-Host "📦 Creating resource group: $resourceGroupName"
+    az group create --name $resourceGroupName --location $location | Out-Null
+}
 
-Write-Host "🎉 Deployment complete."
+Write-Host "🚀 Starting deployment..."
+az deployment group create `
+  --resource-group $resourceGroupName `
+  --template-file "../templates/mainTemplate.json" `
+  --parameters "../templates/parameters.json"
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "❌ Deployment failed."
+    exit 1
+}
+
+Write-Host "✅ Deployment complete."

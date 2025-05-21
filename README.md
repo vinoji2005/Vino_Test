@@ -19,3 +19,14 @@ Click below to deploy directly via Azure Portal:
 ```powershell
 # Ensure Azure CLI and PowerShell are installed, then run:
 .\scripts\deploy.ps1 -ResourceGroupName "rg-fioneer-vinoth" -Location "eastus"
+
+## 🧹 Cleanup
+
+To remove the deployed resources, run the cleanup script:
+
+```bash
+cd scripts
+./cleanup.ps1
+```
+
+This will delete the resource group and all associated resources. Make sure you're targeting the correct environment.
