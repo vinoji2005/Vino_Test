@@ -61,7 +61,7 @@
       "properties": {},
       "tags": {
         "owner": "vinoth.subbiah",
-        "project": "[parameters('tags').project]"
+        "project": "iac-poc"
       }
     },
     {
@@ -85,8 +85,8 @@
         ]
       },
       "tags": {
-        "owner": "[parameters('tags').owner]",
-        "project": "[parameters('tags').project]"
+        "owner": "Tes",
+        "project": "iac-poc"
       }
     }
   ],
